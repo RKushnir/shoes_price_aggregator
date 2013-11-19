@@ -1,0 +1,23 @@
+development:
+  adapter: postgresql
+  encoding: unicode
+  database: intertop_development
+  pool: 5
+  username: roman
+  password: qwerty
+
+test:
+  adapter: postgresql
+  encoding: unicode
+  database: intertop_test
+  pool: 5
+  username: roman
+  password: qwerty
+
+production:
+  adapter: postgresql
+  encoding: unicode
+  database: intertop_production
+  pool: 5
+  username: intertop
+  password:

@@ -1,0 +1,17 @@
+<h1>Prices for the following products have changed today.</h1>
+
+<ul>
+  <%- @price_changes.each do |price_change| -%>
+    <li>
+      <%= link_to price_change[:product].url do -%>
+        <figure>
+          <%= image_tag price_change[:product].thumb_url, alt: 'Product Image' %>
+          <figcaption>
+            Price: <%= price_change[:product].price %>
+            (was <%= price_change[:old_price] %>)
+          </figcaption>
+        </figure>
+      <%- end -%>
+    </li>
+  <%- end -%>
+</ul>
