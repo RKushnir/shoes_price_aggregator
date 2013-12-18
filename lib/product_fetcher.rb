@@ -35,12 +35,13 @@ class ProductFetcher
 
     manager = Typhoeus::Hydra.new(max_concurrency: 10)
 
-    responses = nil
-    connection.in_parallel(manager) do
+    # responses = nil
+    # connection.in_parallel(manager) do
       responses = (2..page_count).map do |page|
+        sleep(1)
         connection.get('/master', page: page)
       end
-    end
+    # end
 
     responses.each do |response|
       page = Nokogiri::HTML(response.body)
