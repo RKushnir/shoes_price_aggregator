@@ -28,7 +28,10 @@ class ProductRepository
         callback.product_price_changed(product, old_price)
       end
     else
-      record.update_attributes!(price: product.price)
+      record.update_attributes!(
+        price:             product.price,
+        price_recorded_on: Date.today,
+      )
     end
   end
 end
