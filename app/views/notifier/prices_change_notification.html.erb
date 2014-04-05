@@ -1,7 +1,7 @@
 <h1>Prices for the following products have changed today.</h1>
 
 <ul>
-  <%- @price_changes.each do |price_change| -%>
+  <%- sorted_price_changes(@price_changes).each do |price_change| -%>
     <li>
       <%= link_to price_change[:product].url do -%>
         <figure>

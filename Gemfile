@@ -51,7 +51,7 @@ gem 'virtus', require: false
 gem 'faraday', require: false
 gem 'typhoeus', require: false
 
-group :test do
+group :development, :test do
   gem 'rspec-rails'
 end
 

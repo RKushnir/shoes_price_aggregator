@@ -16,6 +16,10 @@ class ProductFetcher
       attribute :thumb_url, String
       attribute :price, Integer
     end
+
+    def division
+      url.match(/intertop.ua\/([^\/]+)\//)[1]
+    end
   end
 
   def fetch_products
